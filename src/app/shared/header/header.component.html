@@ -28,12 +28,20 @@
         class="nav-items-item"
         >Articles</a
       >
+      <a
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/counselor"
+        class="nav-items-item"
+        >Get Counselled</a
+      >
     </div>
   </nav>
   <div class="sidebar">
     <a routerLink="/" class="sidebar-item">Home</a>
     <a routerLink="/reports" class="sidebar-item">Reports</a>
     <a routerLink="/articles" class="sidebar-item">Articles</a>
+    <a routerLink="/counselor" class="sidebar-item">Articles</a>
   </div>
   <div
     (click)="toggleSidebar()"

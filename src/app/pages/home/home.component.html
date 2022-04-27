@@ -1,10 +1,15 @@
 <div class="landing">
   <div class="container landing-items">
     <h1 class="big-text">Bullying is not Acceptable!</h1>
-    <a style="margin-right: 1em" class="cust-sec-btn button"
+    <a
+      [routerLink]="'/reports'"
+      style="margin-right: 1em"
+      class="cust-sec-btn button"
       >Report an Incident</a
     >
-    <a class="cust-btn button">Connect to Counsellor</a>
+    <a [routerLink]="'/counselor'" class="cust-btn button"
+      >Connect to Counselor</a
+    >
   </div>
 </div>
 <div class="photo">
