@@ -12,14 +12,29 @@ import { FourZeroFourComponent } from './pages/four-zero-four/four-zero-four.com
 import { ArticlesComponent } from './pages/articles/articles.component';
 import { SpecificArticleComponent } from './pages/specific-article/specific-article.component';
 import { SpecificReportComponent } from './pages/specific-report/specific-report.component';
+import { ArticleComponent } from './forms/article/article.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, ReportsComponent, FourZeroFourComponent, ArticlesComponent, SpecificArticleComponent, SpecificReportComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    ReportsComponent,
+    FourZeroFourComponent,
+    ArticlesComponent,
+    SpecificArticleComponent,
+    SpecificReportComponent,
+    ArticleComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -9,7 +9,10 @@ import { ApiService } from '../../services/api.service';
 })
 export class ArticlesComponent implements OnInit {
   articleArr: Article[] = [];
-
+  title: string = '';
+  brief: string = '';
+  body: string = '';
+  author: string = '';
   constructor(private api: ApiService) {}
 
   ngOnInit(): void {
@@ -17,5 +20,25 @@ export class ArticlesComponent implements OnInit {
     this.api.getArticles().subscribe((data) => {
       _this.articleArr = data;
     });
+  }
+
+  addReport() {
+    this.api
+      .addArticles({
+        title: this.title,
+        brief: this.brief,
+        body: this.body,
+        author: this.author,
+      })
+      .subscribe((val) => {
+        console.log(val);
+        this.title = '';
+        this.brief = '';
+        this.body = '';
+        this.author = '';
+        this.api.getArticles().subscribe((data) => {
+          this.articleArr = data;
+        });
+      });
   }
 }

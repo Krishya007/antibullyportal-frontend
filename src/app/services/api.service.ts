@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Article } from '../models/article';
 import { Report } from '../models/reports';
+import { Volunteer } from '../models/Volunteer';
 
 @Injectable({
   providedIn: 'root',
@@ -22,10 +23,10 @@ export class ApiService {
     );
   }
 
-  addArticles(article: any) {
+  addArticles(article: Article) {
     return this.http.post(
       'https://antibullybackend.onrender.com/api/add-article',
-      JSON.stringify(article)
+      article
     );
   }
 
@@ -41,10 +42,17 @@ export class ApiService {
     );
   }
 
-  addReport(report: any) {
+  addReport(report: Report) {
     return this.http.post(
-      'https://antibullybackend.onrender.com/report',
-      JSON.stringify(report)
+      'https://antibullybackend.onrender.com/api/report',
+      report
+    );
+  }
+
+  addVolunteer(volunteer: Volunteer) {
+    return this.http.post(
+      'https://antibullybackend.onrender.com/api/add-volunteer',
+      volunteer
     );
   }
 }

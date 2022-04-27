@@ -6,6 +6,10 @@
         <div class="six columns">
           <label>Your Name</label>
           <input
+            [(ngModel)]="name"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            required
             placeholder="Enter your name"
             type="text"
             class="u-full-width cust-sec-inp"
@@ -14,6 +18,9 @@
         <div class="six columns">
           <label>Phone Number</label>
           <input
+            [(ngModel)]="phone"
+            [ngModelOptions]="{ standalone: true }"
+            required
             placeholder="Enter your phone"
             type="text"
             class="u-full-width cust-sec-inp"
@@ -23,6 +30,9 @@
       <div class="row">
         <label>Email Address</label>
         <input
+          [(ngModel)]="email"
+          [ngModelOptions]="{ standalone: true }"
+          required
           placeholder="Enter your email"
           type="text"
           class="u-full-width cust-sec-inp"

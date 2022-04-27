@@ -6,42 +6,71 @@
         <div class="row">
           <div class="six columns">
             <label class="primary-color">What is your name?</label>
-            <input type="text" class="u-full-width cust-sec-inp" />
+            <input
+              [(ngModel)]="informantName"
+              [ngModelOptions]="{ standalone: true }"
+              required
+              type="text"
+              class="u-full-width cust-sec-inp"
+            />
           </div>
           <div class="six columns">
             <label class="primary-color">What is your email address?</label>
-            <input type="text" class="u-full-width cust-sec-inp" />
+            <input
+              [(ngModel)]="informantContact"
+              [ngModelOptions]="{ standalone: true }"
+              required
+              type="text"
+              class="u-full-width cust-sec-inp"
+            />
           </div>
         </div>
         <div class="row">
           <label class="primary-color">What is the victim's name?</label>
-          <input type="text" class="u-full-width cust-sec-inp" />
+          <input
+            [(ngModel)]="victimName"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            type="text"
+            class="u-full-width cust-sec-inp"
+          />
         </div>
         <div class="row">
           <label class="primary-color">What actually happened?</label>
-          <textarea type="text" class="u-full-width cust-sec-inp"></textarea>
+          <textarea
+            [(ngModel)]="incidentDesc"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            type="text"
+            class="u-full-width cust-sec-inp"
+          ></textarea>
         </div>
         <div class="row">
           <label class="primary-color"
             >Did anyone stand up against the act? How?</label
           >
-          <textarea type="text" class="u-full-width cust-sec-inp"></textarea>
+          <textarea
+            [(ngModel)]="stepsTaken"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            type="text"
+            class="u-full-width cust-sec-inp"
+          ></textarea>
         </div>
         <div class="row">
           <label class="primary-color">What are your expectations?</label>
-          <textarea type="text" class="u-full-width cust-sec-inp"></textarea>
+          <textarea
+            [(ngModel)]="expectations"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            type="text"
+            class="u-full-width cust-sec-inp"
+          ></textarea>
         </div>
       </form>
-      <div class="row">
-        <div class="six columns">
-          <a href="" class="cust-sec-btn button u-full-width">Report Here</a>
-        </div>
-        <div class="six columns">
-          <a href="" class="cust-sec-btn button u-full-width"
-            >Report To Authority</a
-          >
-        </div>
-      </div>
+      <a (click)="addReport()" class="cust-sec-btn button u-full-width"
+        >Report Here</a
+      >
     </div>
     <div class="hr"></div>
     <h5 class="tac secondary-color">Read Reports</h5>
