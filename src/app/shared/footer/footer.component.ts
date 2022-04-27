@@ -25,9 +25,9 @@ export class FooterComponent implements OnInit {
       })
       .subscribe((val) => {
         console.log(val);
-        this.name='',
-        this.email='',
-        this.phone='',
+        this.name = '';
+        this.email = '';
+        this.phone = '';
       });
   }
 }
