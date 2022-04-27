@@ -28,5 +28,15 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  hideSidebar() {
+    const backdrop = <HTMLElement>document.querySelector('.sidebar-backdrop');
+    const sidebar = <HTMLElement>document.querySelector('.sidebar');
+    sidebar.style.left = '-100%';
+    backdrop.style.opacity = '0';
+    setTimeout(() => {
+      backdrop.style.display = 'none';
+    }, 500);
+  }
+
   ngOnInit() {}
 }
