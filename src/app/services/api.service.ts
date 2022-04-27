@@ -13,45 +13,45 @@ export class ApiService {
 
   getArticles(): Observable<Article[]> {
     return this.http.get<Article[]>(
-      'https://antibullybackend.onrender.com/api/articles'
+      'https://anti-bully-portal-backend.onrender.com/api/articles'
     );
   }
 
   getOneArticle(id: string): Observable<Article> {
     return this.http.get<Article>(
-      `https://antibullybackend.onrender.com/api/a/${id}`
+      `https://anti-bully-portal-backend.onrender.com/api/a/${id}`
     );
   }
 
   addArticles(article: Article) {
     return this.http.post(
-      'https://antibullybackend.onrender.com/api/add-article',
+      'https://anti-bully-portal-backend.onrender.com/api/add-article',
       article
     );
   }
 
   getReports(): Observable<Report[]> {
     return this.http.get<Report[]>(
-      'https://antibullybackend.onrender.com/api/reports'
+      'https://anti-bully-portal-backend.onrender.com/api/reports'
     );
   }
 
   getOneReport(id: string): Observable<Report> {
     return this.http.get<Report>(
-      `https://antibullybackend.onrender.com/api/r/${id}`
+      `https://anti-bully-portal-backend.onrender.com/api/r/${id}`
     );
   }
 
   addReport(report: Report) {
     return this.http.post(
-      'https://antibullybackend.onrender.com/api/report',
+      'https://anti-bully-portal-backend.onrender.com/api/report',
       report
     );
   }
 
   addVolunteer(volunteer: Volunteer) {
     return this.http.post(
-      'https://antibullybackend.onrender.com/api/add-volunteer',
+      'https://anti-bully-portal-backend.onrender.com/api/add-volunteer',
       volunteer
     );
   }
