@@ -62,6 +62,21 @@ a {
 .text {
   background-color: #ffffff;
 }
+.primary-color {
+  color: #1b2845 !important;
+}
+.secondary-color {
+  color: #65afff !important;
+}
+.active-text-color {
+  color: #48e5c2 !important;
+}
+.emph-color {
+  color: #bb0a21 !important;
+}
+.text-color {
+  color: #ffffff !important;
+}
 .cust-inp {
   color: $secondary;
   background-color: transparent !important;
@@ -70,6 +85,16 @@ a {
   border-bottom: 0.15em solid $secondary !important;
   &::placeholder {
     color: $secondary;
+  }
+}
+.cust-sec-inp {
+  color: $primary;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 0.15em solid $primary !important;
+  &::placeholder {
+    color: $primary;
   }
 }
 .cust-btn {
@@ -99,4 +124,22 @@ router-outlet ~ * {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+.tar {
+  text-align: right;
+}
+.hr {
+  border-bottom: 0.15em solid $primary;
+  margin: 1em 0;
+}
+.card {
+  border-radius: 0.25em;
+  .card-name {
+    padding: 1em;
+    border-bottom: 0.15em solid $secondary;
+    text-transform: uppercase;
+  }
+  .card-body {
+    padding: 1em;
+  }
 }

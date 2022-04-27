@@ -9,9 +9,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReportsComponent } from './pages/reports/reports.component';
 import { FourZeroFourComponent } from './pages/four-zero-four/four-zero-four.component';
+import { ArticlesComponent } from './pages/articles/articles.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, ReportsComponent, FourZeroFourComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, ReportsComponent, FourZeroFourComponent, ArticlesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
