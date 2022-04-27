@@ -1,0 +1,26 @@
+<div class="container nav-container">
+  <nav class="flex nav">
+    <div (click)="toggleSidebar()" class="menu flex">
+      <span class="app-icon">menu</span>
+    </div>
+    <span class="logo heading">Anti Bullying Portal</span>
+    <div class="nav-items flex">
+      <a class="nav-items-item active">Home</a>
+      <a class="nav-items-item">Reports</a>
+      <a class="nav-items-item">Articles</a>
+      <a class="nav-items-item">Connect</a>
+    </div>
+  </nav>
+  <div class="sidebar">
+    <a class="sidebar-item active">Home</a>
+    <a class="sidebar-item">Reports</a>
+    <a class="sidebar-item">Articles</a>
+    <a class="sidebar-item">Connect</a>
+  </div>
+  <div
+    (click)="toggleSidebar()"
+    class="sidebar-backdrop"
+    id="sidebar-backdrop"
+    style="display: none"
+  ></div>
+</div>
