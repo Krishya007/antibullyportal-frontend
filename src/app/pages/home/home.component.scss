@@ -28,7 +28,7 @@
 }
 .photo {
   width: 100%;
-  padding: 1.5em 0;
+  padding: 3em 0;
   background-image: url("../../../assets/images/bully.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -47,5 +47,8 @@
     background-color: $primary;
     opacity: 0.8;
     z-index: 0;
+  }
+  p {
+    margin-bottom: 0;
   }
 }

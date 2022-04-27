@@ -5,15 +5,37 @@
     </div>
     <span class="logo heading">Anti Bullying Portal</span>
     <div class="nav-items flex">
-      <a class="nav-items-item active">Home</a>
-      <a class="nav-items-item">Reports</a>
-      <a class="nav-items-item">Articles</a>
-      <a class="nav-items-item">Connect</a>
+      <a
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/"
+        class="nav-items-item"
+        >Home</a
+      >
+      <a
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/reports"
+        class="nav-items-item"
+        >Reports</a
+      >
+      <a
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-items-item"
+        >Articles</a
+      >
+      <a
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-items-item"
+        >Connect</a
+      >
     </div>
   </nav>
   <div class="sidebar">
-    <a class="sidebar-item active">Home</a>
-    <a class="sidebar-item">Reports</a>
+    <a routerLink="/" class="sidebar-item">Home</a>
+    <a routerLink="/reports" class="sidebar-item">Reports</a>
     <a class="sidebar-item">Articles</a>
     <a class="sidebar-item">Connect</a>
   </div>

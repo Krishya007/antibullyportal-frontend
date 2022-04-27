@@ -63,31 +63,40 @@ a {
   background-color: #ffffff;
 }
 .cust-inp {
-  color: $primary;
+  color: $secondary;
   background-color: transparent !important;
   border: none !important;
   border-radius: 0 !important;
-  border-bottom: 0.15em solid $primary !important;
+  border-bottom: 0.15em solid $secondary !important;
   &::placeholder {
-    color: $primary;
+    color: $secondary;
   }
 }
 .cust-btn {
-  background: $primary !important;
-  color: $text !important;
+  background: $secondary !important;
+  color: $primary !important;
   border: 1px solid $secondary !important;
   transition: 0.2s;
   &:hover {
-    background: $secondary !important;
-    color: $primary !important;
-    border: 1px solid $primary !important;
+    background: $primary !important;
+    color: $secondary !important;
+    border: 1px solid $secondary !important;
   }
 }
 .cust-sec-btn {
-  background: $secondary !important;
-  color: $primary !important;
-  border: 1px solid $primary !important;
+  background: $primary !important;
+  color: $secondary !important;
+  border: 1px solid $secondary !important;
 }
 .tac {
   text-align: center;
+}
+
+.body {
+  padding: 2em;
+}
+router-outlet ~ * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
