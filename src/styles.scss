@@ -127,6 +127,7 @@ router-outlet ~ * {
 }
 .tar {
   text-align: right;
+  white-space: pre-line !important;
 }
 .hr {
   border-bottom: 0.15em solid $secondary;

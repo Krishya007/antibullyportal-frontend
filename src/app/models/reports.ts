@@ -1,4 +1,4 @@
-export interface Article {
+export interface Report {
   _id: string;
   informantName: string;
   informantContact: string;
@@ -6,4 +6,5 @@ export interface Article {
   incidentDesc: string;
   stepsTaken: string;
   expectations: string;
+  __v: number;
 }

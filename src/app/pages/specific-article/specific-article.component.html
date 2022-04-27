@@ -2,22 +2,17 @@
   style="margin: 2em auto"
   class="container secondary container-body article-body"
 >
-  <h5>Details</h5>
-  <h6>Title:</h6>
-  <h6>Author:</h6>
+  <h5>
+    Title
+    <h6 [innerText]="this.replaceAll(article.title)"></h6>
+  </h5>
+
+  <h5>
+    Brief
+    <h6 [innerText]="'Article brief: ' + this.replaceAll(article.brief)"></h6>
+  </h5>
+
   <div class="hr-sec"></div>
-  <p class="taj">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis
-    unde reprehenderit facilis est sunt modi adipisci facere eligendi
-    consequuntur libero atque molestiae eius assumenda aperiam laborum sed
-    quasi, officia asperiores minima laudantium rerum. Id voluptates earum sunt
-    molestiae dicta repellendus laborum modi, ea, dolores voluptatibus cum
-    incidunt vitae. Sunt, rem laudantium accusantium odio, iure explicabo saepe
-    nemo nobis culpa doloribus porro, id qui eius. Laborum, perspiciatis
-    eligendi libero, itaque, eum dolorem earum nostrum aut nihil animi quasi?
-    Accusamus consequatur numquam labore! Ratione doloribus rerum nisi
-    distinctio, excepturi nulla vero totam unde sit dignissimos fuga,
-    accusantium ut sed eum voluptatibus!
-  </p>
+  <p [innerText]="this.replaceAll(article.body)" class="taj"></p>
 </div>
 <app-footer></app-footer>

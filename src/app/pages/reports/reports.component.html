@@ -45,16 +45,16 @@
     </div>
     <div class="hr"></div>
     <h5 class="tac secondary-color">Read Reports</h5>
-    <div class="cards row">
-      <div class="twelve columns">
-        <div class="primary card">
-          <div class="card-name tac primary-color">Bada's Case</div>
-          <div class="card-body">
-            <p class="tac primary-color">Informed by Anon</p>
-            <a class="cust-sec-btn u-full-width button card-button"
-              >Read More</a
-            >
-          </div>
+    <div *ngFor="let report of reportArr" class="cards row">
+      <div class="primary card">
+        <div class="card-name tac primary-color">{{ report.victimName }}</div>
+        <div class="card-body">
+          <p class="tac primary-color">Informed Anonymously</p>
+          <a
+            [routerLink]="'/report/' + report._id"
+            class="cust-sec-btn u-full-width button card-button"
+            >Read More</a
+          >
         </div>
       </div>
     </div>

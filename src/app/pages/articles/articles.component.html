@@ -27,13 +27,15 @@
     <div class="hr"></div>
     <h5 class="secondary-color tac">Read Articles</h5>
     <div class="cards row">
-      <div class="twelve columns">
+      <div *ngFor="let article of articleArr" class="twelve columns">
         <div class="primary card">
-          <div class="card-name tac primary-color">Title</div>
+          <div class="card-name tac primary-color">{{ article.title }}</div>
           <div class="card-body">
-            <p class="tac primary-color">Brief</p>
-            <p class="tac primary-color">Author</p>
-            <a class="cust-sec-btn u-full-width button card-button"
+            <p class="tac primary-color">{{ article.brief }}</p>
+            <p class="tac primary-color">{{ article.author }}</p>
+            <a
+              [routerLink]="'/article/' + article._id"
+              class="cust-sec-btn u-full-width button card-button"
               >Read More</a
             >
           </div>

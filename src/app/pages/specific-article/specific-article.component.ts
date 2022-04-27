@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-specific-article',
@@ -9,12 +10,23 @@ import { ActivatedRoute } from '@angular/router';
 export class SpecificArticleComponent implements OnInit {
   id: any;
   paramsSub: any;
+  article: any = {};
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private api: ApiService
+  ) {}
+
+  replaceAll(string: any) {
+    return string.replaceAll('~,~', '\n');
+  }
 
   ngOnInit(): void {
-    this.paramsSub = this.activatedRoute.params.subscribe(
-      (data) => (this.id = data)
-    );
+    const _this = this;
+    this.paramsSub = this.activatedRoute.params.subscribe((data) => {
+      this.api.getOneArticle(data['id']).subscribe((ar) => {
+        _this.article = ar;
+      });
+    });
   }
 }
