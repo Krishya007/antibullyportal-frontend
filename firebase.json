@@ -5,7 +5,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "anti-bully/index.html"
+        "destination": "/index.html"
       }
     ]
   }
