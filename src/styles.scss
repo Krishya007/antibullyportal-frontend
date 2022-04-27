@@ -129,17 +129,30 @@ router-outlet ~ * {
   text-align: right;
 }
 .hr {
+  border-bottom: 0.15em solid $secondary;
+  margin: 1em 0;
+}
+.hr-sec {
   border-bottom: 0.15em solid $primary;
   margin: 1em 0;
 }
 .card {
   border-radius: 0.25em;
+  background-color: $secondary;
   .card-name {
     padding: 1em;
-    border-bottom: 0.15em solid $secondary;
+    border-bottom: 0.15em solid $primary;
     text-transform: uppercase;
   }
   .card-body {
     padding: 1em;
   }
+}
+
+.container-body {
+  padding: 1em;
+  border-radius: 0.25em;
+}
+.taj {
+  text-align: justify;
 }

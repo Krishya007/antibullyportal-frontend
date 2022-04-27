@@ -10,9 +10,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { ReportsComponent } from './pages/reports/reports.component';
 import { FourZeroFourComponent } from './pages/four-zero-four/four-zero-four.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
+import { SpecificArticleComponent } from './pages/specific-article/specific-article.component';
+import { SpecificReportComponent } from './pages/specific-report/specific-report.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, ReportsComponent, FourZeroFourComponent, ArticlesComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, ReportsComponent, FourZeroFourComponent, ArticlesComponent, SpecificArticleComponent, SpecificReportComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

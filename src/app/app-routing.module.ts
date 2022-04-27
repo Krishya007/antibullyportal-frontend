@@ -4,6 +4,8 @@ import { ArticlesComponent } from './pages/articles/articles.component';
 import { FourZeroFourComponent } from './pages/four-zero-four/four-zero-four.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReportsComponent } from './pages/reports/reports.component';
+import { SpecificArticleComponent } from './pages/specific-article/specific-article.component';
+import { SpecificReportComponent } from './pages/specific-report/specific-report.component';
 
 const routes: Routes = [
   {
@@ -14,10 +16,12 @@ const routes: Routes = [
     path: 'reports',
     component: ReportsComponent,
   },
+  { path: 'report/:id', component: SpecificReportComponent },
   {
     path: 'articles',
     component: ArticlesComponent,
   },
+  { path: 'article/:id', component: SpecificArticleComponent },
   {
     path: '**',
     component: FourZeroFourComponent,
