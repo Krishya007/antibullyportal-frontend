@@ -1,6 +1,7 @@
 @import "../../../styles/colors";
 
 .footer {
+  border-top: 0.15em solid $secondary;
   padding: 1.5em;
   * {
     color: $secondary;
