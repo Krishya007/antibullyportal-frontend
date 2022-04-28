@@ -30,6 +30,12 @@ export class ApiService {
     );
   }
 
+  removeArticles(id: string) {
+    return this.http.get(
+      `https://anti-bully-portal-backend.onrender.com/api/a/r/${id}`
+    );
+  }
+
   getReports(): Observable<Report[]> {
     return this.http.get<Report[]>(
       'https://anti-bully-portal-backend.onrender.com/api/reports'
@@ -49,10 +55,28 @@ export class ApiService {
     );
   }
 
+  removeReport(id: string) {
+    return this.http.delete(
+      `https://anti-bully-portal-backend.onrender.com/api/r/r/${id}`
+    );
+  }
+
+  getVolunteers(): Observable<Volunteer[]> {
+    return this.http.get<Volunteer[]>(
+      'https://anti-bully-portal-backend.onrender.com/api/get-volunteers'
+    );
+  }
+
   addVolunteer(volunteer: Volunteer) {
     return this.http.post(
       'https://anti-bully-portal-backend.onrender.com/api/add-volunteer',
       volunteer
+    );
+  }
+
+  removeVolunteer(id: string) {
+    return this.http.delete(
+      `https://anti-bully-portal-backend.onrender.com/api/r/v/${id}`
     );
   }
 }
