@@ -15,7 +15,6 @@ import { SpecificReportComponent } from './pages/specific-report/specific-report
 import { ArticleComponent } from './forms/article/article.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CounselorComponent } from './pages/counselor/counselor.component';
-import { AdminComponent } from './pages/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { AdminComponent } from './pages/admin/admin.component';
     SpecificReportComponent,
     ArticleComponent,
     CounselorComponent,
-    AdminComponent,
   ],
   imports: [
     BrowserModule,
